@@ -20,6 +20,19 @@ checkEmail("Qmail2@gmail.com");
 let str = "cdbBdbsbz";
 let a = str.match(/db+d/gi);
 let b = a.join().match(/b+/gi);
-let c = a.join().match(/d{1}/gi);
+let c = a.join().match(/d$/g);
 console.log(a, b, c);
 
+//task4
+let a = "Java Script";
+let b = a.match(/\w*/).toString();
+let c = a.match(/\w*$/g).toString();
+let result = c + b;
+console.log(result);
+
+//task5
+function isValid(string){
+    if (/^\d{4}-\d{4}-\d{4}-\d{4}$/g.test(string)) return console.log("valid");
+    else return console.log("isn't valid");
+}
+isValid("9999-9999-9990-9999");
